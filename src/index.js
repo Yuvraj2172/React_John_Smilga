@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Test from "./Test";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function Greeting() {
+  return (
+    <>
+    <h2 id="heading" className="cla">
+      This is the first component.
+    </h2>
+    <Test/>
+    </>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// function Greeting() {
+//   return React.createElement(
+//     "h2",
+//     {},
+//     React.createElement("p", {}, "This is a paragraph inside a Heading")
+//   );
+// }
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Greeting />);

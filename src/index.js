@@ -1,24 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Test from "./Test";
-
-function Greeting() {
+import "./index.css";
+const BookList = () => {
   return (
-    <>
-    <h2 id="heading" className="cla">
-      This is the first component.
-    </h2>
-    <Test/>
-    </>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
-}
+};
+const Book = () => {
+  return (
+    <article className="book">
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+const Image = () => (
+  <h2>
+    <img
+      src="https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL600_SR600,400_.jpg"
+      alt="book"
+    />
+  </h2>
+);
+const Title = () => <h2>Atomic Habits</h2>;
+const Author = () => {
+  return <h4>James Clear</h4>;
+};
 
-// function Greeting() {
-//   return React.createElement(
-//     "h2",
-//     {},
-//     React.createElement("p", {}, "This is a paragraph inside a Heading")
-//   );
-// }
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Greeting />);
+root.render(<BookList />);

@@ -7,34 +7,22 @@ const BookList = () => {
       <Book />
       <Book />
       <Book />
+      <Book />
     </section>
   );
 };
 const Book = () => {
+  const title = 'Atomic Habits'
+  const author = 'James Clear';
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src="https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL600_SR600,400_.jpg" />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
+      {/* <p>{let x=6}</p> */}
+      <p>{6+6}</p>
     </article>
   );
-};
-const Image = () => (
-  <h2>
-    <img
-      src="https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL600_SR600,400_.jpg"
-      alt="book"
-    />
-  </h2>
-);
-const Title = () => <h2>Atomic Habits</h2>;
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: "#617d98",
-    fontSize: "0.75rem",
-    marginTop: "0.5rem",
-  };
-  return <h4 style={inlineHeadingStyles}>James Clear</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -2,27 +2,49 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const title = "Atomic Habits";
-const author = "James Clear";
-const img =
-  "https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL600_SR600,400_.jpg";
-
+const firstBook = {
+  title: " Atomic Habits",
+  author: "James Clear",
+  img: "https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg",
+};
+const secondBook = {
+  title: "Energize Your Mind",
+  author: "Gaur Gopal Das",
+  img: "https://d1b14unh5d6w7g.cloudfront.net/1728265371.01.S001.LXXXXXXX.jpg?Expires=1679232985&Signature=L~sXCScOw2tanW8glFuRZ0qFczTgC9T-ZSQRjTQP6cC29EA3a~wweHVkR-XxBIWjHIbJxLHJLO9kzLol9a9cpiXel9Kv0Oy0l0PSBJ98mB5kzOorIar2RH7oVh3deMJXSOZhF98xfRYXEwaBYL69Qekv-sBctFHd9tXcTqjC6tg_&Key-Pair-Id=APKAIUO27P366FGALUMQ",
+};
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book img={img} title={title} author={author} />
-      <Book img={img} title={title} author={author} />
-      <Book img={img} title={title} author={author} />
-      <Book img={img} title={title} author={author} />
+      <Book
+        img={firstBook.img}
+        author={firstBook.author}
+        title={firstBook.title}
+      />
+      <Book
+        img={secondBook.img}
+        author={secondBook.author}
+        title={secondBook.title}
+      />
+      <Book
+        img={firstBook.img}
+        author={firstBook.author}
+        title={firstBook.title}
+      />
+      <Book
+        img={secondBook.img}
+        author={secondBook.author}
+        title={secondBook.title}
+      />
     </section>
   );
 };
-const Book = (props) => {
+const Book = ({img , title , author}) => {
+  // const {img , title , author} = props
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author.toUpperCase()}</h4>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   );
 };

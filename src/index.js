@@ -29,20 +29,40 @@ const books=[
 ]
 const names=['yuvraj','soni', 'uveee'];
 const newNames =[...names, 'yuvrrraj'];
-console.log(newNames);
+// console.log(newNames);
 // const newNames = names.map((name)=>{
 //   return <h1>{name}</h1>
 // });
 const BookList = () => {
   return (
+    <>
     <section className="booklist">
+     <EventExamples/>
     {books.map((book)=>{
       // const {img , title,author , children,id} = book;
       return <Book {...book}  key = {book.id}/>
     })}
     </section>
+    </>
   );
 };
+
+const EventExamples =()=>{
+  const handleFormInput=()=>{
+   console.log('Handle Form Input');
+  };
+  const clickHandler=()=>{
+    alert('Handle Button Clicked');
+  }
+  return <section>
+    <form >
+      <h2>Typical Form</h2>
+      <input type="text" name='example' onChange={handleFormInput} style={{margin: '1rem 0'}}/>
+    </form>
+    <button onClick={clickHandler} >click me</button>
+  </section>;
+}
+
 const Book = (props) => {
   const {img , title , author,children} = props;
   // console.log(props)

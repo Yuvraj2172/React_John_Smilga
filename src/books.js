@@ -9,7 +9,7 @@ export const books = [
     {
       title: "Energize Your Mind",
       author: "Gaur Gopal Das",
-      img: "https://d1b14unh5d6w7g.cloudfront.net/1728265371.01.S001.LXXXXXXX.jpg?Expires=1679232985&Signature=L~sXCScOw2tanW8glFuRZ0qFczTgC9T-ZSQRjTQP6cC29EA3a~wweHVkR-XxBIWjHIbJxLHJLO9kzLol9a9cpiXel9Kv0Oy0l0PSBJ98mB5kzOorIar2RH7oVh3deMJXSOZhF98xfRYXEwaBYL69Qekv-sBctFHd9tXcTqjC6tg_&Key-Pair-Id=APKAIUO27P366FGALUMQ",
+      img: "https://m.media-amazon.com/images/I/41RwQlo446L._SY344_BO1,204,203,200_.jpg",
       id: 2,
     },
     {

@@ -15,16 +15,16 @@ const BookList = () => {
     console.log(someValue);
   }
   return (
-    <>
+    <div >
+        <EventExamples  />
       <section className="booklist">
-        <EventExamples />
         
         {books.map((book) => {
           // const {img , title,author , children,id} = book;
           return <Book {...book} key={book.id} displayValue={displayValue}  />;
         })}
       </section>
-    </>
+    </div>
   );
 };
 

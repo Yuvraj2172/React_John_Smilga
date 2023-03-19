@@ -1,8 +1,9 @@
- export const books = [
+import img1 from './images/book1.jpg'
+export const books = [
     {
       title: " Atomic Habits",
       author: "James Clear",
-      img: "https://m.media-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg",
+      img: img1,
       id: 1,
     },
     {

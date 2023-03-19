@@ -53,15 +53,15 @@ const EventExamples = () => {
     //  console.log('Handle Form Input');
     // console.log(e.target);
     // console.log(e.target.name);
-    // console.log(e.target.value);
+    console.log(e.target.value);
   };
   const clickHandler = () => {
     alert("Handle Button Clicked");
   };
-  const handleFormSubmission=(e)=>{
+  const handleFormSubmission = (e) => {
     e.preventDefault();
-    console.log('Form Submitted');
-  }
+    console.log("Form Submitted");
+  };
   return (
     <section>
       <form onSubmit={handleFormSubmission}>
@@ -72,8 +72,19 @@ const EventExamples = () => {
           onChange={handleFormInput}
           style={{ margin: "1rem 0" }}
         />
+        <button type="submit" style={{ margin: "0.5rem", padding: "0.5rem" }}>
+          Submit
+        </button>
       </form>
-      <button onClick={clickHandler}>click me</button>
+      <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={clickHandler}>click me</button>
+      <button
+        style={{ margin: "0.5rem", padding: "0.5rem" }}
+        onClick={() => {
+          console.log("Hii");
+        }}
+      >
+        HI
+      </button>
     </section>
   );
 };
@@ -87,6 +98,7 @@ const Book = (props) => {
       <h2>{title}</h2>
       {children}
       <h4>{author.toUpperCase()}</h4>
+      <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={()=>{ console.log(title)}} >Display Title</button>
     </article>
   );
 };

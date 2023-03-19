@@ -19,9 +19,9 @@ const BookList = () => {
         <EventExamples  />
       <section className="booklist">
         
-        {books.map((book) => {
+        {books.map((book,index) => {
           // const {img , title,author , children,id} = book;
-          return <Book {...book} key={book.id} displayValue={displayValue}  />;
+          return <Book {...book} key={book.id} displayValue={displayValue} number ={index} />;
         })}
       </section>
     </div>

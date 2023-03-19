@@ -10,64 +10,65 @@ import Book from "./Book";
 //   return <h1>{name}</h1>
 // });
 const BookList = () => {
-  const someValue = 'shakeAndBake';
-  const displayValue = ()=>{
-    console.log(someValue);
-  }
+  // const someValue = 'shakeAndBake';
+  // const displayValue = ()=>{
+  //   console.log(someValue);
+  // }
   return (
     <div >
-        <EventExamples  />
+        {/* <EventExamples  /> */}
+        <h1>amazon best sellers</h1>
       <section className="booklist">
         
         {books.map((book,index) => {
           // const {img , title,author , children,id} = book;
-          return <Book {...book} key={book.id} displayValue={displayValue} number ={index} />;
+          return <Book {...book} key={book.id} number ={index} />;
         })}
       </section>
     </div>
   );
 };
 
-const EventExamples = () => {
-  const handleFormInput = (e) => {
-    //  console.log('Handle Form Input');
-    // console.log(e.target);
-    // console.log(e.target.name);
-    console.log(e.target.value);
-  };
-  const clickHandler = () => {
-    alert("Handle Button Clicked"); 
-  };
-  const handleFormSubmission = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted");
-  };
-  return (
-    <section>
-      <form onSubmit={handleFormSubmission}>
-        <h2>Typical Form</h2>
-        <input
-          type="text"
-          name="example"
-          onChange={handleFormInput}
-          style={{ margin: "1rem 0" }}
-        />
-        <button type="submit" style={{ margin: "0.5rem", padding: "0.5rem" }}>
-          Submit
-        </button>
-      </form>
-      <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={clickHandler}>click me</button>
-      <button
-        style={{ margin: "0.5rem", padding: "0.5rem" }}
-        onClick={() => {
-          console.log("Hii");
-        }}
-      >
-        HI
-      </button>
-    </section>
-  );
-};
+// const EventExamples = () => {
+//   const handleFormInput = (e) => {
+//     //  console.log('Handle Form Input');
+//     // console.log(e.target);
+//     // console.log(e.target.name);
+//     console.log(e.target.value);
+//   };
+//   const clickHandler = () => {
+//     alert("Handle Button Clicked"); 
+//   };
+//   const handleFormSubmission = (e) => {
+//     e.preventDefault();
+//     console.log("Form Submitted");
+//   };
+//   return (
+//     <section>
+//       {/* <form onSubmit={handleFormSubmission}>
+//         <h2>Typical Form</h2>
+//         <input
+//           type="text"
+//           name="example"
+//           onChange={handleFormInput}
+//           style={{ margin: "1rem 0" }}
+//         />
+//         <button type="submit" style={{ margin: "0.5rem", padding: "0.5rem" }}>
+//           Submit
+//         </button>
+//       </form>
+//       <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={clickHandler}>click me</button>
+//       <button
+//         style={{ margin: "0.5rem", padding: "0.5rem" }}
+//         onClick={() => {
+//           console.log("Hii");
+//         }}
+//       >
+//         HI
+//       </button> */}
+//     </section>
+//   );
+// };
 
 
 

@@ -28,13 +28,18 @@ const books = [
     id: 4,
   },
 ];
-const names = ["yuvraj", "soni", "uveee"];
-const newNames = [...names, "yuvrrraj"];
+// const names = ["yuvraj", "soni", "uveee"];
+// const newNames = [...names, "yuvrrraj"];
 // console.log(newNames);
 // const newNames = names.map((name)=>{
 //   return <h1>{name}</h1>
 // });
 const BookList = () => {
+  const getBook=(id)=>{
+    const book = books.find((book)=>book.id===id);
+    console.log(book);
+
+  }
   const someValue = 'shakeAndBake';
   const displayValue = ()=>{
     console.log(someValue);
@@ -45,7 +50,7 @@ const BookList = () => {
         <EventExamples />
         {books.map((book) => {
           // const {img , title,author , children,id} = book;
-          return <Book {...book} key={book.id} displayValue={displayValue} />;
+          return <Book {...book} key={book.id} displayValue={displayValue} getBook={getBook} />;
         })}
       </section>
     </>
@@ -94,8 +99,11 @@ const EventExamples = () => {
 };
 
 const Book = (props) => {
-  const { img, title, author, children, displayValue } = props;
+  const { img, title, author, children, displayValue,getBook,id } = props;
   // console.log(props)
+  const getSingleBook=()=>{
+    getBook(id);
+  }
   return (
     <article className="book">
       <img src={img} alt={title} />
@@ -103,6 +111,8 @@ const Book = (props) => {
       {children}
       <h4>{author.toUpperCase()}</h4>
       <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={displayValue} >Display Title</button>
+      {/* <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={getSingleBook} >Click Me</button> */}
+      <button style={{ margin: "0.5rem", padding: "0.5rem" }} onClick={()=>{getBook(id)}} >Click Me</button>
     </article>
   );
 };
